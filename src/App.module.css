@@ -1,0 +1,128 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+.header {
+height: 7%;
+}
+.starterContainer {
+  width: 100%;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.playBtn,
+.pauseBtn {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.player {
+  min-height: 300px;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ebf3ff;
+  border-radius: 10px;
+  border: #ced7e5 solid 1px;
+  box-shadow: #fff -5px -5px 10px, #cbcbcb 5px 5px 10px;
+}
+
+.coverProgressContainer {
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.coverImage {
+  width: 80%;
+  height: 80%;
+  height: max-content;
+}
+.coverProgressContainer > div {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.progressBar {
+  border: solid 1px grey;
+  width: 80%;
+  max-width: 400px;
+  height: 12px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progressBar > div {
+  transition: all linear 0.5s;
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(41, 120, 255);
+}
+
+.titleLyricContainer {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.volume {
+  height: 5px;
+  margin: 10px;
+}
+.lyricContainer {
+  padding: 10px;
+  min-height: 100px;
+  min-width: 50%;
+  max-width: 70%;
+  background-color: rgb(201, 227, 231);
+  border: 1px solid rgb(85, 167, 194);
+  border-radius: 10px;
+}
+.lyricContainer > h3 {
+  text-align: right;
+  border-bottom: #145783 solid 1px;
+}
+.currentLyric {
+  direction: rtl;
+  padding: 5px;
+
+}
+
+@media (max-width:768px) {
+  .player{
+    flex-direction: column;
+  }
+  .coverProgressContainer,
+  .titleLyricContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .titleLyricContainer {
+
+  }
+}
